@@ -1,0 +1,115 @@
+.mobile-menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 14;
+    top: 0;
+    right: -100%;
+    background-color: $mDC;
+    overflow-x: hidden;
+    transition: ease 0.4s;
+    padding-top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    .btn-prev-menu {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        background: none;
+        border: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $mYC;
+        display: none;
+        padding-left: 30px;
+        &::after {
+            content: '<';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            transition: left 0.5s;
+        }
+        &:hover {
+            &::after {
+                left: 0;
+            }
+        }
+    }
+    .btn-cls-menu {
+        position: absolute;
+        right: 25px;
+        top: 5px;
+        font-size: 45px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .menu-mob {
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            .item {
+                border-bottom: 1px solid rgba(61, 61, 61, 1);
+                &:first-child {
+                    border-top: 1px solid rgba(61, 61, 61, 1);
+                }
+                a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    padding: 20px 10px;
+                    display: flex;
+                    cursor: pointer;
+                    transition: ease 0.3s;
+                    &:hover {
+                        transition: ease 0.3s;
+                        color: $mYC;
+                    }
+                    &:active {
+                        transition: ease 0.3s;
+                        color: $mYC;
+                    }
+                }
+                ._icon-arrow {
+                    position: relative;
+                    &::before {
+                        font-size: 12px;
+                        transform: translateY(-50%) rotate(-90deg);
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transition: all 0.4s ease 0s;
+                    }
+                }
+            }
+        }
+    }
+    .second-menu-mob {
+        display: none;
+        .sub-mob-list {
+            display: none;
+            .item a {
+                padding: 20px 25px;
+            }
+        }
+    }
+    .sub-mob-list-open {
+        display: block;
+        &::before {
+            transform: translateY(-50%) rotate(0deg) !important;
+        }
+    }
+}
+
+.mobile-menu-open {
+    right: 0;
+    transition: ease 0.4s;
+    opacity: 1;
+    visibility: visible;
+}

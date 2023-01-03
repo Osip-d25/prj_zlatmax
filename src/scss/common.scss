@@ -1,0 +1,85 @@
+// Заголовки, общие БЄМ блоки и проче...
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease 0s;
+}
+
+head {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+header,
+main,
+footer {
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.inner {
+    max-width: 1590px;
+    padding: 0 25px;
+    margin: 0 auto;
+    @media (max-width: 1600px) {
+        padding: 0 25px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+        a {
+            cursor: pointer;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    transition: ease-in-out 0.25s;
+    &:hover {
+        transition: ease-in-out 0.25s;
+    }
+}
+
+.show-submenu {
+    display: flex !important;
+}
